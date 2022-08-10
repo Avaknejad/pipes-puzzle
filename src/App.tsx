@@ -10,18 +10,32 @@ map:
 ╻╹┣╸┏┻┃┛
 ┻━┻━╋━━┓
 ┗┃╹╺┫━╺╸`;
+const convert = Array.from(map).filter(function(val){
+  return val != " ";
+})
+const map = ( this.sendCommand('map'))
+            .split('\n')
+            .slice(1, -1)
+            .map((row) => row.split(''));
+
+        return map;
+ 
+console.log(map);
 
 const imageMapAssign = {
-  0 : '┻',
-  1 : '┛'
+  4 : '┻',
+  2 : '┛',
+  1 : '╻',
+  5 : '╋',
+  3 : '┃'
 }
 
 const App = () => {
   const level = 1
 
   const renderMap = () => {
-    // TODO:
-    // Parse string to array
+    // TODO: 4
+    // Parse string to array 5
 
     // return [<div class="img-container"><img width="40" height="40" src="1.png" /></div>]
   }
@@ -31,9 +45,9 @@ const App = () => {
   };
   
 
-  // TODO: convert map to string array
-  // const map:string[] = map ...
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+  // TODO: convert map to string array 1
+  // const map:string[] = map ... 2
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set 3
 
   const Tile = () => (
     <div className="img-container">
@@ -48,7 +62,7 @@ const App = () => {
         <div className="container">
           {
             /* TODO: 
-              Render Tiles by user level number
+              Render Tiles by user level number 6
             */
           }
          <Tile />
