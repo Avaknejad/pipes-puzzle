@@ -10,25 +10,24 @@ map:
 ╻╹┣╸┏┻┃┛
 ┻━┻━╋━━┓
 ┗┃╹╺┫━╺╸`;
+
+let seperatedBoard = map.split('\n');
+let splicedBoard = seperatedBoard.splice(2, seperatedBoard.length)
+let board = splicedBoard.map(item => item.split(''))
+
 const convert = Array.from(map).filter(function(val){
   return val != " ";
 })
-const map = ( this.sendCommand('map'))
-            .split('\n')
-            .slice(1, -1)
-            .map((row) => row.split(''));
 
-        return map;
- 
-console.log(map);
 
-const imageMapAssign = {
-  4 : '┻',
-  2 : '┛',
-  1 : '╻',
-  5 : '╋',
-  3 : '┃'
-}
+// const imageMapAssign = {
+//   4 : '┻',
+//   2 : '┛',
+//   1 : '╻',
+//   : '╹',
+//   5 : '╋',
+//   3 : '┃'
+// }
 
 const App = () => {
   const level = 1
